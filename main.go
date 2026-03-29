@@ -25,8 +25,8 @@ var rootCmd = &cobra.Command{
 It allows users to easily create and manage .gitignore files for various programming languages and frameworks.
 You may also list available templates and generate .gitignore files based on those templates.`,
 	PersistentPreRunE: func(cmd *cobra.Command, _ []string) error {
-		if strings.HasPrefix(cmd.CommandPath(), "exclude completion") ||
-			strings.HasPrefix(cmd.CommandPath(), "exclude help") {
+		if strings.HasPrefix(cmd.CommandPath(), "gogn completion") ||
+			strings.HasPrefix(cmd.CommandPath(), "gogn help") {
 			return nil
 		}
 
